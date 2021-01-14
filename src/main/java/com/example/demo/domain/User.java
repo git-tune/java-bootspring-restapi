@@ -2,26 +2,44 @@ package com.example.demo.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
 
   @Id
+  @Column(name = "id")
   private String id;
+
+  @Column(name = "name")
   private String name;
+
+  @Column(name = "phoneNumber")
   private String phoneNumber;
+
+  @Column(name = "birthday")
   private Date birthday;
+
+  @Column(name = "email")
   private String email;
+
+  @Column(name = "postalCode")
   private String postalCode;
+
+  @Column(name = "address")
   private String address;
+
+  @Column(name = "numberOfPurchases")
   private int numberOfpurchases;
+
+  @Column(name = "lastPurchaseDate")
   private Date lastPurchaseDate;
 
-public String getId() {
+  public String getId() {
     return id;
   }
 
@@ -94,15 +112,15 @@ public String getId() {
   }
 
   public User(String id, String name, String phoneNumber, Date birthday, String email, String postalCode,
-		String address, int numberOfpurchases, Date lastPurchaseDate) {
-      super();
-      setId(id);
-      setName(name);
-      setPhoneNumber(phoneNumber);
-      setBirthday(birthday);
-      setPostalCode(postalCode);
-      setAddress(address);
-      setNumberOfpurchases(numberOfpurchases);
-      setLastPurchaseDate(lastPurchaseDate);
-	}
+      String address, int numberOfpurchases, Date lastPurchaseDate) {
+    super();
+    setId(id);
+    setName(name);
+    setPhoneNumber(phoneNumber);
+    setBirthday(birthday);
+    setPostalCode(postalCode);
+    setAddress(address);
+    setNumberOfpurchases(numberOfpurchases);
+    setLastPurchaseDate(lastPurchaseDate);
+  }
 }
