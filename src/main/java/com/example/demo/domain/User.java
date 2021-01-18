@@ -18,7 +18,7 @@ public class User {
   @Column(name = "name")
   private String name;
 
-  @Column(name = "phoneNumber")
+  @Column(name = "phone_number")
   private String phoneNumber;
 
   @Column(name = "birthday")
@@ -27,16 +27,16 @@ public class User {
   @Column(name = "email")
   private String email;
 
-  @Column(name = "postalCode")
+  @Column(name = "postal_code")
   private String postalCode;
 
   @Column(name = "address")
   private String address;
 
-  @Column(name = "numberOfPurchases")
-  private int numberOfpurchases;
+  @Column(name = "number_of_purchases")
+  private int numberOfPurchases;
 
-  @Column(name = "lastPurchaseDate")
+  @Column(name = "last_purchase_date")
   private Date lastPurchaseDate;
 
   public String getId() {
@@ -95,12 +95,12 @@ public class User {
     this.address = address;
   }
 
-  public int getNumberOfpurchases() {
-    return numberOfpurchases;
+  public int getNumberOfPurchases() {
+    return numberOfPurchases;
   }
 
-  public void setNumberOfpurchases(int numberOfpurchases) {
-    this.numberOfpurchases = numberOfpurchases;
+  public void setNumberOfpurchases(int numberOfPurchases) {
+    this.numberOfPurchases = numberOfPurchases;
   }
 
   public Date getLastPurchaseDate() {
@@ -112,7 +112,7 @@ public class User {
   }
 
   public User(String id, String name, String phoneNumber, Date birthday, String email, String postalCode,
-      String address, int numberOfpurchases, Date lastPurchaseDate) {
+      String address, int numberOfPurchases, Date lastPurchaseDate) {
     super();
     setId(id);
     setName(name);
@@ -120,7 +120,7 @@ public class User {
     setBirthday(birthday);
     setPostalCode(postalCode);
     setAddress(address);
-    setNumberOfpurchases(numberOfpurchases);
+    setNumberOfpurchases(numberOfPurchases);
     setLastPurchaseDate(lastPurchaseDate);
   }
 }

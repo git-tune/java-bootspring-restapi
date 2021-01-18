@@ -71,7 +71,7 @@ public class CSVHelper {
             for (User user : users) {
                 List<String> data = Arrays.asList(user.getId(), user.getName(), user.getPhoneNumber(),
                         String.valueOf(user.getBirthday()), user.getEmail(), user.getPostalCode(), user.getAddress(),
-                        String.valueOf(user.getNumberOfpurchases()), String.valueOf(user.getLastPurchaseDate()));
+                        String.valueOf(user.getNumberOfPurchases()), String.valueOf(user.getLastPurchaseDate()));
 
                 csvPrinter.printRecord(data);
             }
