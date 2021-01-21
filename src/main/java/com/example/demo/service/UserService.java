@@ -35,6 +35,7 @@ public class UserService {
     }
 
     public List<User> getAllUsers() {
+        System.out.println(repository.findAll());
         return repository.findAll();
     }
 

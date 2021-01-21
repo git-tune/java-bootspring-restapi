@@ -59,18 +59,22 @@ public class UserController {
 
     @GetMapping("/users")
     public ResponseEntity<List<User>> getAllUsers() {
-        System.out.println("OK");
+
+        System.out.println("Get OK");
+
         try {
             List<User> users = service.getAllUsers();
 
             if (users.isEmpty()) {
+
                 System.out.println("Empty");
+
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
 
             return new ResponseEntity<>(users, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println("Eception");
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -89,15 +93,21 @@ public class UserController {
         return "redirect:/user";
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public String update(@PathVariable String id, @ModelAttribute User user) {
+
+        System.out.println("Put OK");
+
         user.setId(id);
         service.save(user);
         return "redirect:/user";
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public String destroy(@PathVariable String id) {
+
+        System.out.println("Delete OK");
+
         service.delete(id);
         return "redirect:/user";
     }
